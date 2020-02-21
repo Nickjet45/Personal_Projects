@@ -22,7 +22,7 @@ def Mail_Bot(email, subject_msg, body_msg):
         msg = f'subject: {subject}\n\n {body}'
 
         # Sends the email to whatever receiving_email is inputted
-        server.sendmail('python3autobot@gmail.com',
+        server.sendmail("Sender's email address",
                         email,
                         msg)
 
