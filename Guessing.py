@@ -1,6 +1,5 @@
 import random
 
-
 def guess_Number():
     guessed_number = -1
     hidden_number = random.randint(0, 100)
@@ -22,24 +21,22 @@ def guess_Number():
 
 def roll_Dice():
     response = input('Would you like to roll the dice?[Y/N] ')
-    if 'y' or 'Y' in response:
+    if 'y' in response:
         while True:
             number_of_sides = int(input('How many sides would you like for the dice to have? '))
             rolled_number = random.randint(1, number_of_sides)
             print('You rolled {}'.format(rolled_number))
-            new_response = input('Would you like to roll again?[y/n] ')
+            new_response = input('Would you like to roll again?[Y/N] ')
             if 'y' in new_response:
                 print('Restarting program...')
-            elif 'Y' in new_response:
-                print('Restarting program')
-            elif 'N' in new_response:
+            elif 'n' in new_response:
                 print('Cancelling program...')
                 break
-            elif 'n' in new_response:
-                print('Cancelling program....')
-                break
-
-    elif 'n' or 'N' in response:
+    elif 'n' in response:
         print('Cancelling program....')
+    else:
+        print('Invalid response, restarting program...')
+        roll_Dice()
 
 
+guess_Number()
