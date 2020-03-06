@@ -28,8 +28,7 @@ else:
 # Enter User-Agent by Googling "What is my User Agent"
 
 headers = {"User-Agent":
-               'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit'
-               '/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'}
+               '#Enter User-Agent'}
 
 # Function to check the price of an Amazon project by:
 # Gathering the elements from the page
@@ -89,7 +88,7 @@ def check_Price(price_to_fall, email):
               'will check again tomorrow. '
               'Price is currently ${}'.format(price_to_fall, price))
         time.sleep(43200)
-        check_Price(price_track, email)
+        check_Price(price_track, email_given)
 
 
 if __name__ == '__main__':
