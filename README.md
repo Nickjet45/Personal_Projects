@@ -1,2 +1,2 @@
-# Personal_Projects
-Repositry of persoal projects, each individual project will be moved to their own repositry and given proper comments 
+# Small-Side-Projects
+Repositry of projects that are either too small to get their own area, or no longer function as they once did
