@@ -47,9 +47,11 @@ def check_Price(price_to_fall, email):
     title = soup.find(id="productTitle").get_text()
 
     # Searches the variable soup to find the current price of the item
-    # .get_text() is simply to remove all white spaces that was created when pulling the data
+    # .get_text() is to retrieve the data from the html tag
     # If the first id doesn't exist, then it means the item is on sale
     # So it begins to check for that second id
+    
+    ##OUTDATED
     if 'amazon' in URL:
         try:
             price = soup.find(id="priceblock_ourprice").get_text()
